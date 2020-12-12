@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import IncrementContext from '../Context/incrementContext'
 
-const Button = ({ increment, value, setValue }) => {
+const Button = () => {
+    const { counter, increment } = useContext(IncrementContext)
     return (
-        <button onClick={() => increment(value, setValue)}>Incrémenter</button>
+        <button onClick={() => increment(counter)}>Incrémenter</button>
     )
 }
 

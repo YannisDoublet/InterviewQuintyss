@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import IncrementContext from '../Context/incrementContext'
 
-const Paragraph = ({ value }) => {
+const Paragraph = () => {
+    const { counter } = useContext(IncrementContext)
     return (
-        <p>{value}</p>
+        <p>{counter}</p>
     )
 }
 
